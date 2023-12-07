@@ -1,0 +1,14 @@
+steps:
+  - label: ":hammer: Build"
+    command: "echo 'Hello, World! - Build'"
+    key: build
+
+  - label: ":test_tube: Test"
+    command: "echo 'Hello, World! - Test'"
+    key: test
+    depends_on: build
+
+  - label: ":rocket: Deploy"
+    command: "echo 'Hello, World! - Deploy'"
+    key: deploy
+    depends_on: test
