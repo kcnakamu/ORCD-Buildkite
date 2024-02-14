@@ -1,4 +1,0 @@
-steps:
-  - label: "Test Build"
-    command: "echo 'Hello, World! '"
-    key: build
