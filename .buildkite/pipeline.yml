@@ -2,7 +2,7 @@ steps:
   - label: ":python: Test Mujoco Python Script"
     commands:
       - pipenv install --deploy --dev
-      - pipenv run py.test
+      - pipenv run py.test mujoco/mujoco_test.py
 
   # - label: ":shell: Run Bash Script"
   #   command: "bash mujoco/run_bash_engaging.sh"
