@@ -1,3 +1,10 @@
 steps:
-  - command: echo "Hello world"
-    label: "Test if echo needs quote marks"
+  - label: ":python: Test Mujoco Python Script"
+    command: "python mujoco/mujoco_test.py"
+    agents:
+      queue: "python"
+
+  - label: ":shell: Run Bash Script"
+    command: "bash mujoco/run_bash_engaging.sh"
+    agents:
+      queue: "bash"
