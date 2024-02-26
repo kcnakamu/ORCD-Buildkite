@@ -1,7 +1,13 @@
 steps:
-  - label: ":python: Test Mujoco Python Script"
-    commands:
-      - python mujoco_test.py
+  - label: "Install Python and Dependencies"
+    command: 
+      sudo apt-get update
+      sudo apt-get install -y python3
+      python3 -m pip install --upgrade pip
+
+  - label: "Run Your Script"
+    command: "python3 mujoco_test.py"
+
 
   # - label: ":shell: Run Bash Script"
   #   command: "bash mujoco/run_bash_engaging.sh"
