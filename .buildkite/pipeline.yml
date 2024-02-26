@@ -1,10 +1,10 @@
 steps:
   - label: ":python: Test Mujoco Python Script"
-    command: "python mujoco/mujoco_test.py"
-    agents:
-      queue: "python"
+    commands:
+      - pipenv install --deploy --dev
+      - pipenv run py.test
 
-  - label: ":shell: Run Bash Script"
-    command: "bash mujoco/run_bash_engaging.sh"
-    agents:
-      queue: "bash"
+  # - label: ":shell: Run Bash Script"
+  #   command: "bash mujoco/run_bash_engaging.sh"
+  #   agents:
+  #     queue: "bash"
